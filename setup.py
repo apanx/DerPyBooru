@@ -3,13 +3,11 @@
 from setuptools import setup
 from setuptools import find_packages
 
-import derpibooru
-
 setup(
   name = "DerPyBooru",
   description = "Python bindings for Derpibooru's API",
   url = "https://github.com/joshua-stone/DerPyBooru",
-  version = "0.6",
+  version = "0.7.2",
   author = "Joshua Stone",
   author_email = "joshua.gage.stone@gmail.com",
   license = "Simplified BSD License",
@@ -17,7 +15,7 @@ setup(
   packages = find_packages(),
   install_requires = ["requests"],
   include_package_data = True,
-  download_url = "https://github.com/joshua-stone/DerPyBooru/tarball/0.6",
+  download_url = "https://github.com/joshua-stone/DerPyBooru/tarball/0.7.2",
   classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",

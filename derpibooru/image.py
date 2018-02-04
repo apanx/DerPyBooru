@@ -45,13 +45,8 @@ class Image(object):
       if not hasattr(self, field):
         setattr(self, field, body) 
 
-    if self.original_format == "gif":
-      setattr(self, "webm", self.representations["webm"])
-      setattr(self, "mp4", self.representations["mp4"])
-
-
   def __str__(self):
-    return "Image({0})".format(self.id_number)
+    return "Image({0})".format(self.id)
 
   @property
   def tags(self):
@@ -126,14 +121,14 @@ class Image(object):
        
   @property
   def url(self):
-    return "https://derpibooru.org/{}".format(self.id_number)
+    return "https://derpibooru.org/{}".format(self.id)
 
   @property
   def data(self):
     return self._data
 
   def update(self):
-    data = get_image_data(self.id_number)
+    data = get_image_data(self.id)
 
     if data:
       self._data = data
